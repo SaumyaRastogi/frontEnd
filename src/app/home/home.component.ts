@@ -71,7 +71,7 @@ texture_se: any;
   get f() { return this.loginForm.controls; }
 
   onSubmit(loginForm:any) {
-    console.log("clicked")
+    console.log("clicked");
     // let answer="abc";
     // this.router.navigate(['response',answer]);
     

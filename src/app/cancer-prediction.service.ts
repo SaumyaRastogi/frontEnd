@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CancerPredictionService {
-  Url:string='http://localhost:8080/users'; //endpoint Url here
+  Url:string='http://127.0.0.1:8000/status/'; //endpoint Url here
   
   constructor(private http: HttpClient) { }
   cancerPrediction(area_mean,

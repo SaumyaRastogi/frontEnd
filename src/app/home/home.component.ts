@@ -70,32 +70,32 @@ texture_se: any;
   }
   get f() { return this.loginForm.controls; }
 
-  onSubmit() {
+  onSubmit(loginForm:any) {
     console.log("clicked")
     // let answer="abc";
     // this.router.navigate(['response',answer]);
     
     this.cancerPredictionService.cancerPrediction(
-      this.area_mean.value,
-      this.area_se.value,
-      this.compactness_mean.value,
-      this.compactness_se.value,
-      this.compactness_worst.value,
-      this.concave_points_mean.value,
-      this.concave_points_se.value,
-      this.concavity_se.value,
-      this.concavity_worst.value,
-      this.fractal_dimension_mean.value,
-      this.fractal_dimension_se.value,
-      this.fractal_dimension_worst.value,
-      this.smoothness_mean.value,
-      this.smoothness_se.value,
-      this.smoothness_worst.value,
-      this.symmetry_mean.value,
-      this.symmetry_se.value,
-      this.symmetry_worst.value,
-      this.texture_mean.value,
-      this.texture_se.value)
+      this.f.area_mean.value,
+      this.f.area_se.value,
+      this.f.compactness_mean.value,
+      this.f.compactness_se.value,
+      this.f.compactness_worst.value,
+      this.f.concave_points_mean.value,
+      this.f.concave_points_se.value,
+      this.f.concavity_se.value,
+      this.f.concavity_worst.value,
+      this.f.fractal_dimension_mean.value,
+      this.f.fractal_dimension_se.value,
+      this.f.fractal_dimension_worst.value,
+      this.f.smoothness_mean.value,
+      this.f.smoothness_se.value,
+      this.f.smoothness_worst.value,
+      this.f.symmetry_mean.value,
+      this.f.symmetry_se.value,
+      this.f.symmetry_worst.value,
+      this.f.texture_mean.value,
+      this.f.texture_se.value)
             .subscribe(
                 (data) => {
                     this.answer=data.svm;

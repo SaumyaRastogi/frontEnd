@@ -6,6 +6,9 @@ ul {
     background-color: #000442;
   }
   
+
+  
+
   li {
     float: right;
   }
@@ -37,4 +40,18 @@ ul {
     overflow-y: auto;
   }
 
+  div.hov
+  {
+    margin-top: 8px; 
+    margin-right:10px;
+    font-size: 10px;
+  }
   
+  
+  div.hov:hover {
+    margin-top: 7px; 
+    margin-right:9px;
+    font-size: 12px;
+  }
+  
+   

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CancerPredictionService } from '../cancer-prediction.service';
+import { Receive } from '../receive';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { CancerPredictionService } from '../cancer-prediction.service';
 })
 export class HomeComponent implements OnInit {
   loginForm: FormGroup;
-  public answer: String;
+  public answer: Receive;
   area_mean: any;
  
 area_se: any;
@@ -98,7 +99,11 @@ texture_se: any;
       this.f.texture_se.value)
             .subscribe(
                 (data) => {
-                    this.answer=data.svm;
+                    this.answer.svm=data.svm;
+                    this.answer.rfr=data.rfr;
+                    this.answer.nby=data.nby;
+                    this.answer.dtr=data.dtr;
+                    this.answer.knn=data.knn;
                     this.router.navigate(['response',this.answer]);
                     console.log(this.answer)
 

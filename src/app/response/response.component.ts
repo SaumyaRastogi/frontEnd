@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-response',
   templateUrl: './response.component.html',
@@ -14,7 +15,7 @@ export class ResponseComponent implements OnInit {
  
 
   ngOnInit() {
-    this.finalAnswer = this.route.snapshot.paramMap.get('answer');
+    this.finalAnswer = this.route.snapshot.paramMap.get('answer.svm');
     console.log("Got token from link " + this.finalAnswer);
   }
 
